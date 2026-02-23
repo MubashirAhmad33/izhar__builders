@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Title from "./Title";
 import { Mail, Phone, MapPin } from "lucide-react";
-import CTA from "./CTA";
 
 export default function Contact() {
   return (
@@ -91,23 +90,6 @@ export default function Contact() {
             </button>
           </motion.form>
         </div>
-
-        {/* Floating CTA */}
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{
-            type: "spring",
-            stiffness: 250,
-            damping: 30,
-            mass: 1,
-            delay: 0.2,
-          }}
-          className="absolute -bottom-16 right-8 md:right-16 w-80 md:w-96 rounded-3xl shadow-2xl z-20"
-        >
-          {/* <CTA /> */}
-        </motion.div>
       </div>
     </section>
   );
