@@ -13,10 +13,22 @@ function App() {
     <>
       <SoftBackdrop />
       <LenisScroll />
-      <Navbar setModalOpen={setModalOpen} />
+      <Navbar />
       <Home />
       <Footer />
-      {modalOpen && <CTA />}
+
+      {/* Trigger button */}
+      <div className="fixed bottom-10 right-10 z-50">
+        <button
+          className="px-6 py-3 bg-indigo-600 text-white rounded-xl shadow-lg hover:scale-105 transition"
+          onClick={() => setModalOpen(true)}
+        >
+          Build Your Dream
+        </button>
+      </div>
+
+      {/* Modal CTA */}
+      {modalOpen && <CTA setModalOpen={setModalOpen} />}
     </>
   );
 }
